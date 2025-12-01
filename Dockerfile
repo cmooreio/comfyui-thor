@@ -28,8 +28,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /opt
 
-# Clone ComfyUI fork that adds proper HunyuanImage2.1 support
-RUN git clone --depth=1 https://github.com/KimbingNg/ComfyUI-HunyuanImage2.1.git ComfyUI
+# Clone official ComfyUI
+RUN git clone --depth=1 https://github.com/comfyanonymous/ComfyUI.git ComfyUI
 
 WORKDIR /opt/ComfyUI
 
@@ -48,8 +48,8 @@ RUN mkdir -p \
     /opt/ComfyUI/models/diffusion_models \
     /models
 
-# Install ComfyUI Manager for node pack management via web UI
-RUN git clone --depth=1 https://github.com/ltdrdata/ComfyUI-Manager.git \
+# Install official ComfyUI Manager for node pack management via web UI
+RUN git clone --depth=1 https://github.com/Comfy-Org/ComfyUI-Manager.git \
     /opt/ComfyUI/custom_nodes/ComfyUI-Manager && \
     pip install -r /opt/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
 
