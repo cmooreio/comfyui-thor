@@ -48,6 +48,11 @@ RUN mkdir -p \
     /opt/ComfyUI/models/diffusion_models \
     /models
 
+# Install ComfyUI Manager for node pack management via web UI
+RUN git clone --depth=1 https://github.com/ltdrdata/ComfyUI-Manager.git \
+    /opt/ComfyUI/custom_nodes/ComfyUI-Manager && \
+    pip install -r /opt/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
+
 # Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
