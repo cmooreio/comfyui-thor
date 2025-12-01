@@ -41,6 +41,8 @@ RUN pip install --upgrade pip && \
     grep -vE '^torch(vision|audio)?$' requirements.txt > requirements-filtered.txt && \
     echo "opencv-python" >> requirements-filtered.txt && \
     echo "pywavelets" >> requirements-filtered.txt && \
+    echo "imageio" >> requirements-filtered.txt && \
+    echo "scikit-image" >> requirements-filtered.txt && \
     pip install -r requirements-filtered.txt
 
 # Create model directories (defaults, but we'll also mount external models)
