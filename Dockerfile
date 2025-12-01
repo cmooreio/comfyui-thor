@@ -39,6 +39,7 @@ RUN pip install --index-url https://pypi.jetson-ai-lab.io/sbsa/cu130 "torchaudio
 # Install Python deps (skip torch/torchvision/torchaudio - already provided)
 RUN pip install --upgrade pip && \
     grep -vE '^torch(vision|audio)?$' requirements.txt > requirements-filtered.txt && \
+    echo "opencv-python" >> requirements-filtered.txt && \
     pip install -r requirements-filtered.txt
 
 # Create model directories (defaults, but we'll also mount external models)
