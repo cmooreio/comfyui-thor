@@ -8,3 +8,4 @@ scikit-image
 ultralytics
 piexif
 segment-anything
+numpy<2
