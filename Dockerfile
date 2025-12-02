@@ -36,14 +36,16 @@ WORKDIR /opt/ComfyUI
 # Install torchaudio from Jetson AI Lab (CUDA-enabled for Thor, matches PyTorch 2.8.0)
 RUN pip install --index-url https://pypi.jetson-ai-lab.io/sbsa/cu130 "torchaudio==2.8.0" --no-deps
 
-# Extra packages for custom nodes (not in ComfyUI requirements.txt)
-ENV EXTRA_PACKAGES="opencv-python pywavelets imageio scikit-image ultralytics piexif"
-
 # Install Python deps (skip torch/torchvision/torchaudio - already provided)
 RUN pip install --upgrade pip && \
     grep -vE '^torch(vision|audio)?$' requirements.txt > requirements-filtered.txt && \
-    for pkg in $EXTRA_PACKAGES; do echo "$pkg" >> requirements-filtered.txt; done && \
     pip install -r requirements-filtered.txt
+
+# Extra packages for custom nodes (can be overridden via ConfigMap mount)
+# These are pre-installed at build time for faster startup, but entrypoint
+# will re-check and install any new/changed packages from this file
+COPY extra-requirements.txt /opt/ComfyUI/extra-requirements.txt
+RUN pip install -r /opt/ComfyUI/extra-requirements.txt
 
 # Create model directories (defaults, but we'll also mount external models)
 RUN mkdir -p \

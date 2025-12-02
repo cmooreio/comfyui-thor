@@ -3,6 +3,7 @@ set -e
 
 MODELS_DIR="/models"
 CONFIG_FILE="/opt/ComfyUI/extra_model_paths.yaml"
+EXTRA_REQUIREMENTS="/opt/ComfyUI/extra-requirements.txt"
 
 # Standard ComfyUI model type directories
 MODEL_TYPES=(
@@ -61,6 +62,17 @@ generate_model_paths() {
 }
 
 echo "=== ComfyUI Entrypoint ==="
+
+# Install extra requirements (allows dynamic package additions via ConfigMap)
+if [[ -f "$EXTRA_REQUIREMENTS" ]]; then
+    echo "Installing extra requirements from $EXTRA_REQUIREMENTS..."
+    pip install --quiet -r "$EXTRA_REQUIREMENTS" || echo "Warning: Some packages may have failed to install"
+    echo "Extra requirements installation complete."
+else
+    echo "No extra requirements file found at $EXTRA_REQUIREMENTS"
+fi
+
+echo ""
 echo "Generating model paths configuration..."
 
 # Generate the config file

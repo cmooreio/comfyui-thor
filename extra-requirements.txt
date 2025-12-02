@@ -1,0 +1,10 @@
+# Extra packages for ComfyUI custom nodes
+# This file can be overridden via ConfigMap mount at /opt/ComfyUI/extra-requirements.txt
+# Entrypoint will pip install from this file at startup
+opencv-python
+pywavelets
+imageio
+scikit-image
+ultralytics
+piexif
+segment-anything
