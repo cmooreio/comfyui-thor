@@ -11,3 +11,5 @@ segment-anything
 numpy<2
 omegaconf
 blend-modes
+timm
+yacs
