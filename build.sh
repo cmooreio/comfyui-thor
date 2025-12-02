@@ -27,10 +27,11 @@ fi
 # Get git commit SHA (short)
 GIT_SHA=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 
-# Build tags
+# Build tags (strip 'v' prefix from version for cleaner tag)
+VERSION_TAG="${COMFYUI_VERSION#v}"
 TAG_LATEST="${REPO}:latest"
 TAG_SHA="${REPO}:${GIT_SHA}"
-TAG_COMFYUI="${REPO}:comfyui-${COMFYUI_VERSION}"
+TAG_VERSION="${REPO}:${VERSION_TAG}"
 
 echo "=============================================="
 echo "Building ComfyUI Docker Image for Jetson Thor"
@@ -41,7 +42,7 @@ echo ""
 echo "Tags to be created:"
 echo "  - ${TAG_LATEST}"
 echo "  - ${TAG_SHA}"
-echo "  - ${TAG_COMFYUI}"
+echo "  - ${TAG_VERSION}"
 echo "=============================================="
 echo ""
 
@@ -50,7 +51,7 @@ docker build \
     --build-arg COMFYUI_VERSION="${COMFYUI_VERSION}" \
     -t "${TAG_LATEST}" \
     -t "${TAG_SHA}" \
-    -t "${TAG_COMFYUI}" \
+    -t "${TAG_VERSION}" \
     .
 
 echo ""
@@ -62,12 +63,12 @@ if [[ "${1:-}" == "--push" ]]; then
     echo "Pushing images to Docker Hub..."
     docker push "${TAG_LATEST}"
     docker push "${TAG_SHA}"
-    docker push "${TAG_COMFYUI}"
+    docker push "${TAG_VERSION}"
     echo ""
     echo "Push complete!"
     echo "  ${TAG_LATEST}"
     echo "  ${TAG_SHA}"
-    echo "  ${TAG_COMFYUI}"
+    echo "  ${TAG_VERSION}"
 else
     echo "To push to Docker Hub, run:"
     echo "  ./build.sh --push"

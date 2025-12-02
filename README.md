@@ -29,7 +29,7 @@ cd /path/to/homelab/docker/comfyui-thor
 Each build creates three tags:
 - `cmooreio/comfyui-thor:latest` - Latest build
 - `cmooreio/comfyui-thor:<git-sha>` - Git commit SHA for traceability
-- `cmooreio/comfyui-thor:comfyui-<version>` - ComfyUI version (e.g., `comfyui-v0.3.76`)
+- `cmooreio/comfyui-thor:<version>` - ComfyUI version (e.g., `0.3.76`)
 
 ## Updating ComfyUI Version
 
