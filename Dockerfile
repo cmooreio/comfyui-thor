@@ -37,7 +37,7 @@ WORKDIR /opt/ComfyUI
 RUN pip install --index-url https://pypi.jetson-ai-lab.io/sbsa/cu130 "torchaudio==2.8.0" --no-deps
 
 # Extra packages for custom nodes (not in ComfyUI requirements.txt)
-ENV EXTRA_PACKAGES="opencv-python pywavelets imageio scikit-image ultralytics pyexif"
+ENV EXTRA_PACKAGES="opencv-python pywavelets imageio scikit-image ultralytics piexif"
 
 # Install Python deps (skip torch/torchvision/torchaudio - already provided)
 RUN pip install --upgrade pip && \
