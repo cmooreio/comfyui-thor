@@ -1,5 +1,5 @@
 # Jetson Thor / JetPack 7 / CUDA 13 / PyTorch 2.9 base
-FROM nvcr.io/nvidia/pytorch:25.11-py3
+FROM nvcr.io/nvidia/pytorch:25.10-py3
 
 # ComfyUI version to install (pinned for reproducibility)
 ARG COMFYUI_VERSION=v0.3.76
@@ -37,8 +37,9 @@ RUN git clone --branch ${COMFYUI_VERSION} --depth=1 https://github.com/comfyanon
 
 WORKDIR /opt/ComfyUI
 
-# NOTE: torchaudio skipped - Jetson AI Lab only has 2.9.0 which causes ABI mismatch
-# with PyTorch 2.10 in 25.11 base image. Audio nodes will not work until compatible version available.
+# Install torchaudio from Jetson AI Lab (CUDA-enabled for Thor)
+# Matches PyTorch 2.9 in 25.10 base image
+RUN pip install --index-url https://pypi.jetson-ai-lab.io/sbsa/cu130 "torchaudio==2.9.0" --no-deps
 
 # Install Python deps (skip torch/torchvision/torchaudio - already provided)
 RUN pip install --upgrade pip && \

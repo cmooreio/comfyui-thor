@@ -13,3 +13,4 @@ omegaconf
 blend-modes
 timm
 yacs
+git+https://github.com/facebookresearch/sam2
