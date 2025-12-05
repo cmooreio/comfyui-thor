@@ -50,7 +50,8 @@ RUN pip install --upgrade pip && \
 # These are pre-installed at build time for faster startup, but entrypoint
 # will re-check and install any new/changed packages from this file
 COPY extra-requirements.txt /opt/ComfyUI/extra-requirements.txt
-RUN pip install -r /opt/ComfyUI/extra-requirements.txt
+# Use --no-build-isolation so packages like sageattention can find torch during build
+RUN pip install --no-build-isolation -r /opt/ComfyUI/extra-requirements.txt
 
 # Create all model directories (both internal and external mount point)
 # These match the MODEL_TYPES in entrypoint.sh for extra_model_paths.yaml generation

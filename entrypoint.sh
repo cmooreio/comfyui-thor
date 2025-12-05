@@ -99,7 +99,8 @@ echo "=== ComfyUI Entrypoint ==="
 # Install extra requirements (allows dynamic package additions via ConfigMap)
 if [[ -f "$EXTRA_REQUIREMENTS" ]]; then
     echo "Installing extra requirements from $EXTRA_REQUIREMENTS..."
-    pip install --quiet -r "$EXTRA_REQUIREMENTS" || echo "Warning: Some packages may have failed to install"
+    # Use --no-build-isolation to allow packages like sageattention to find torch during build
+    pip install --quiet --no-build-isolation -r "$EXTRA_REQUIREMENTS" || echo "Warning: Some packages may have failed to install"
     echo "Extra requirements installation complete."
 else
     echo "No extra requirements file found at $EXTRA_REQUIREMENTS"
