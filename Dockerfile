@@ -2,7 +2,7 @@
 FROM nvcr.io/nvidia/pytorch:25.10-py3
 
 # ComfyUI version to install (pinned for reproducibility)
-ARG COMFYUI_VERSION=v0.15.1
+ARG COMFYUI_VERSION=v0.16.4
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
