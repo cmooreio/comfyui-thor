@@ -1,9 +1,10 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 MODELS_DIR="/models"
 CONFIG_FILE="/opt/ComfyUI/extra_model_paths.yaml"
 EXTRA_REQUIREMENTS="/opt/ComfyUI/extra-requirements.txt"
+ALLOW_RUNTIME_PIP="${COMFYUI_ALLOW_RUNTIME_PIP:-0}"
 
 # Standard ComfyUI model type directories + custom node model directories
 MODEL_TYPES=(
@@ -96,14 +97,18 @@ generate_model_paths() {
 
 echo "=== ComfyUI Entrypoint ==="
 
-# Install extra requirements (allows dynamic package additions via ConfigMap)
-if [[ -f "$EXTRA_REQUIREMENTS" ]]; then
-    echo "Installing extra requirements from $EXTRA_REQUIREMENTS..."
-    # Use --no-build-isolation to allow packages like sageattention to find torch during build
-    pip install --quiet --no-build-isolation -r "$EXTRA_REQUIREMENTS" || echo "Warning: Some packages may have failed to install"
-    echo "Extra requirements installation complete."
+# Install extra requirements only when explicitly enabled.
+if [[ "$ALLOW_RUNTIME_PIP" == "1" || "$ALLOW_RUNTIME_PIP" == "true" ]]; then
+    if [[ -f "$EXTRA_REQUIREMENTS" ]]; then
+        echo "Installing extra requirements from $EXTRA_REQUIREMENTS..."
+        # Use --no-build-isolation to allow packages like sageattention to find torch during build
+        pip install --quiet --no-build-isolation -r "$EXTRA_REQUIREMENTS" || echo "Warning: Some packages may have failed to install"
+        echo "Extra requirements installation complete."
+    else
+        echo "No extra requirements file found at $EXTRA_REQUIREMENTS"
+    fi
 else
-    echo "No extra requirements file found at $EXTRA_REQUIREMENTS"
+    echo "Runtime extra requirements installation disabled (set COMFYUI_ALLOW_RUNTIME_PIP=1 to opt in)."
 fi
 
 echo ""

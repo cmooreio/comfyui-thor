@@ -40,4 +40,5 @@ Each build creates three tags:
 ## Custom Nodes / Extra Packages
 
 Edit `extra-requirements.txt` to add Python packages needed by custom nodes.
-The entrypoint script will install any new packages at container startup.
+Those packages are baked in at image build time. Runtime installs are disabled by default;
+opt in with `COMFYUI_ALLOW_RUNTIME_PIP=1` only when you explicitly accept the drift risk.

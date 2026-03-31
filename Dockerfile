@@ -1,14 +1,22 @@
 # Jetson Thor / JetPack 7 / CUDA 13 / PyTorch 2.9 base
-FROM nvcr.io/nvidia/pytorch:25.10-py3
+FROM nvcr.io/nvidia/pytorch:25.10-py3@sha256:42263b2424fc237b34c4fc4a91c30d603c57eed36e37d31ff6d9a4f1f801edee
 
 # ComfyUI version to install (pinned for reproducibility)
 ARG COMFYUI_VERSION=v0.18.3
+ARG COMFYUI_REF=173e1aa2dfd8e7bae53f64a538faa4c51e9efbcb
+ARG COMFYUI_MANAGER_REF=8aca0751d13db3574b48b99bd28f2f432ddd025c
+
+# SAM2 source archive — git+ URLs cannot be hash-verified by pip;
+# we download the tarball and verify its sha256 before installing.
+ARG SAM2_COMMIT=2b90b9f5ceec907a1c18123530e92e794ad901a4
+ARG SAM2_SHA256=1f2fbfad3ffa38110368abac76c6ef9df9c282a66d5c2807bc94abf4d2fb30f8
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
-    COMFYUI_VERSION=${COMFYUI_VERSION}
+    COMFYUI_VERSION=${COMFYUI_VERSION} \
+    COMFYUI_ALLOW_RUNTIME_PIP=0
 
 # OS deps for ComfyUI (image, audio, video support)
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -33,7 +41,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /opt
 
 # Clone official ComfyUI at pinned version
-RUN git clone --branch ${COMFYUI_VERSION} --depth=1 https://github.com/comfyanonymous/ComfyUI.git ComfyUI
+RUN git clone --filter=blob:none https://github.com/comfyanonymous/ComfyUI.git ComfyUI && \
+    cd ComfyUI && \
+    git checkout --detach "${COMFYUI_REF}" && \
+    test "$(git rev-parse HEAD)" = "${COMFYUI_REF}"
 
 WORKDIR /opt/ComfyUI
 
@@ -52,6 +63,13 @@ RUN pip install --upgrade pip && \
 COPY extra-requirements.txt /opt/ComfyUI/extra-requirements.txt
 # Use --no-build-isolation so packages like sageattention can find torch during build
 RUN pip install --no-build-isolation -r /opt/ComfyUI/extra-requirements.txt
+
+# Install SAM2 from a sha256-verified GitHub archive (git+ URLs are not hash-verifiable by pip)
+RUN wget -q -O /tmp/sam2.tar.gz \
+        "https://github.com/facebookresearch/sam2/archive/${SAM2_COMMIT}.tar.gz" \
+    && echo "${SAM2_SHA256}  /tmp/sam2.tar.gz" | sha256sum -c - \
+    && pip install --no-deps /tmp/sam2.tar.gz \
+    && rm /tmp/sam2.tar.gz
 
 # Create all model directories (both internal and external mount point)
 # These match the MODEL_TYPES in entrypoint.sh for extra_model_paths.yaml generation
@@ -92,8 +110,10 @@ RUN mkdir -p \
     /models/ultralytics_segm /models/VHS_video_formats
 
 # Install official ComfyUI Manager for node pack management via web UI
-RUN git clone --depth=1 https://github.com/Comfy-Org/ComfyUI-Manager.git \
+RUN git clone --filter=blob:none https://github.com/Comfy-Org/ComfyUI-Manager.git \
     /opt/ComfyUI/custom_nodes/ComfyUI-Manager && \
+    git -C /opt/ComfyUI/custom_nodes/ComfyUI-Manager checkout --detach "${COMFYUI_MANAGER_REF}" && \
+    test "$(git -C /opt/ComfyUI/custom_nodes/ComfyUI-Manager rev-parse HEAD)" = "${COMFYUI_MANAGER_REF}" && \
     pip install -r /opt/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
 
 # Copy entrypoint script
