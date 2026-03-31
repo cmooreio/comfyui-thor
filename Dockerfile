@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /opt
 
 # Clone official ComfyUI at pinned version
-RUN git clone --filter=blob:none https://github.com/comfyanonymous/ComfyUI.git ComfyUI && \
+RUN git clone --filter=blob:none https://github.com/Comfy-Org/ComfyUI.git ComfyUI && \
     cd ComfyUI && \
     git checkout --detach "${COMFYUI_REF}" && \
     test "$(git rev-parse HEAD)" = "${COMFYUI_REF}"
@@ -52,17 +52,19 @@ WORKDIR /opt/ComfyUI
 # Matches PyTorch 2.9 in 25.10 base image
 RUN pip install --index-url https://pypi.jetson-ai-lab.io/sbsa/cu130 "torchaudio==2.9.0" --no-deps
 
-# Install Python deps (skip torch/torchvision/torchaudio - already provided)
-RUN pip install --upgrade pip && \
-    grep -vE '^torch(vision|audio)?$' requirements.txt > requirements-filtered.txt && \
-    pip install -r requirements-filtered.txt
+# Install hash-locked Python deps for ComfyUI core and ComfyUI-Manager.
+# The lockfile is generated from the pinned upstream commits by ./generate-lockfiles.sh
+# and intentionally omits torch/torchvision/torchaudio because the base image supplies them.
+COPY requirements-runtime.lock.txt /tmp/requirements-runtime.lock.txt
+RUN pip install --require-hashes -r /tmp/requirements-runtime.lock.txt
 
 # Extra packages for custom nodes (can be overridden via ConfigMap mount)
 # These are pre-installed at build time for faster startup, but entrypoint
 # will re-check and install any new/changed packages from this file
 COPY extra-requirements.txt /opt/ComfyUI/extra-requirements.txt
+COPY requirements-extra.lock.txt /tmp/requirements-extra.lock.txt
 # Use --no-build-isolation so packages like sageattention can find torch during build
-RUN pip install --no-build-isolation -r /opt/ComfyUI/extra-requirements.txt
+RUN pip install --no-build-isolation --require-hashes -r /tmp/requirements-extra.lock.txt
 
 # Install SAM2 from a sha256-verified GitHub archive (git+ URLs are not hash-verifiable by pip)
 RUN wget -q -O /tmp/sam2.tar.gz \
@@ -113,8 +115,7 @@ RUN mkdir -p \
 RUN git clone --filter=blob:none https://github.com/Comfy-Org/ComfyUI-Manager.git \
     /opt/ComfyUI/custom_nodes/ComfyUI-Manager && \
     git -C /opt/ComfyUI/custom_nodes/ComfyUI-Manager checkout --detach "${COMFYUI_MANAGER_REF}" && \
-    test "$(git -C /opt/ComfyUI/custom_nodes/ComfyUI-Manager rev-parse HEAD)" = "${COMFYUI_MANAGER_REF}" && \
-    pip install -r /opt/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
+    test "$(git -C /opt/ComfyUI/custom_nodes/ComfyUI-Manager rev-parse HEAD)" = "${COMFYUI_MANAGER_REF}"
 
 # Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh

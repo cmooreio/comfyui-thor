@@ -1,0 +1,5 @@
+# Torch stack provided by the pinned NVIDIA base image plus the explicit
+# torchaudio install in Dockerfile. Keep these aligned with the base image.
+torch==2.9.0
+torchvision==0.24.0
+torchaudio==2.9.0

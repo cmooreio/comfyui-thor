@@ -16,13 +16,13 @@ Example:
 ```bash
 docker build \
   -t cmooreio/comfyui-thor:latest \
-  -t cmooreio/comfyui-thor:v0.3.76 \
+  -t cmooreio/comfyui-thor:v0.18.3 \
   -t cmooreio/comfyui-thor:abc1234 \
   .
 ```
 
 - `latest` - Always points to most recent build
-- `<comfyui-version>` - Matches COMFYUI_VERSION ARG in Dockerfile (e.g., v0.3.76)
+- `<comfyui-version>` - Matches COMFYUI_VERSION ARG in Dockerfile (e.g., v0.18.3)
 - `<git-sha>` - Short git commit hash from this repo
 
 Do NOT use other tags like base image version (25.11-py3) or component versions (torchaudio, pytorch).
