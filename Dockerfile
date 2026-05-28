@@ -2,9 +2,9 @@
 FROM nvcr.io/nvidia/pytorch:25.10-py3@sha256:42263b2424fc237b34c4fc4a91c30d603c57eed36e37d31ff6d9a4f1f801edee
 
 # ComfyUI version to install (pinned for reproducibility)
-ARG COMFYUI_VERSION=v0.19.3
-ARG COMFYUI_REF=3086026401180c9216bcb6ace442a4e3587d2c66
-ARG COMFYUI_MANAGER_REF=22fc850853996285534eaff1f1e5eee5d3f2a6a3
+ARG COMFYUI_VERSION=v0.22.0
+ARG COMFYUI_REF=a8d2519058ea766ca3b14916bcc01ecef5efd235
+ARG COMFYUI_MANAGER_REF=7d611c051e442533b083831d562bd0660cf9e0b4
 
 # SAM2 source archive — git+ URLs cannot be hash-verified by pip;
 # we download the tarball and verify its sha256 before installing.

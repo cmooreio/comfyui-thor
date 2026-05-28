@@ -130,7 +130,7 @@ aiohttp==3.13.4 \
     --hash=sha256:f989ac8bc5595ff761a5ccd32bdb0768a117f36dd1504b1c2c074ed5d3f4df9c \
     --hash=sha256:fc432f6a2c4f720180959bc19aa37259651c1a4ed8af8afc84dd41c60f15f791
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   aiohttp-socks
     #   matrix-nio
 aiohttp-socks==0.11.0 \
@@ -144,7 +144,7 @@ aiosignal==1.4.0 \
 alembic==1.18.4 \
     --hash=sha256:a5ed4adcf6d8a4cb575f3d759f071b03cd6e5c7618eb796cb52497be25bfe19a \
     --hash=sha256:cb6e1fd84b6174ab8dbb2329f86d631ba9559dd78df550b57804d607672cedbc
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 annotated-doc==0.0.4 \
     --hash=sha256:571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320 \
     --hash=sha256:fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4
@@ -189,7 +189,7 @@ av==17.0.0 \
     --hash=sha256:ed4013fac77c309a4a68141dcf6148f1821bb1073a36d4289379762a6372f711 \
     --hash=sha256:f8ef8e8f1a0cbb2e0ad49266015e2277801a916e2186ac9451b493ff6dfdec27 \
     --hash=sha256:ffaf266a1a9c2148072de0a4b5ae98061465178d2cfaa69ee089761149342974
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 blake3==1.0.8 \
     --hash=sha256:003f61e8c41dd9931edddf1cc6a1bb680fb2ac0ad15493ef4a1df9adc59ce9df \
     --hash=sha256:0171e85d56dec1219abdae5f49a0ed12cb3f86a454c29160a64fd8a8166bba37 \
@@ -300,7 +300,7 @@ blake3==1.0.8 \
     --hash=sha256:fc9fc4a0a1a13991b23a589fb6fbb8290bd94a72c130e69e27c9769612516424 \
     --hash=sha256:fe1b02ab49bfd969ef50b9f17482a2011c77536654af21807ba5c2674e0bb2a0 \
     --hash=sha256:fe61d52da1d102aabb0e315d3fc613c11c103376aa0a8510aeee159939612f76
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 certifi==2026.2.25 \
     --hash=sha256:027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa \
     --hash=sha256:e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7
@@ -429,7 +429,7 @@ chardet==7.4.0.post2 \
     --hash=sha256:dc6829803ba71cb427dffac03a948ae828c617710bbd5f97ae3b34ab18558414 \
     --hash=sha256:e0c9c6b5c296c0e5197bc8876fcc04d58a6ddfba18399e598ba353aba28b038e \
     --hash=sha256:e719bf17854051970938e260d2c589fe3fde3da0a681acdafd266e3bbf75c1af
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 charset-normalizer==3.4.6 \
     --hash=sha256:06a7e86163334edfc5d20fe104db92fcd666e5a5df0977cb5680a506fe26cc8e \
     --hash=sha256:0c173ce3a681f309f31b87125fecec7a5d1347261ea11ebbb856fa6006b23c8c \
@@ -565,11 +565,13 @@ click==8.3.1 \
     --hash=sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a \
     --hash=sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6
     # via typer
-comfy-aimdo==0.2.12 \
-    --hash=sha256:3843ca106a857fa82e02d4ae17dc061e7ae041ff994e32e6582a851f66efe8d7 \
-    --hash=sha256:60fec92752d5d7a51e49ecb213e954665ed80faf664b8dab2449c1cc1fe46a7e \
-    --hash=sha256:c7ed18d0a32f47117dfdaa01c48be98edf09a1c886eb05e7164e9333c932f8b3
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+comfy-aimdo==0.3.0 \
+    --hash=sha256:077798f37f139216512df360a1a4d688dac667f6994043d37d680f8abf7336ab \
+    --hash=sha256:712cce1ae8f7752e01807c0000d6d7094923cd761de6c6cd1090ae322044a814 \
+    --hash=sha256:9fd58a81ab87975fee0db470f5fca1c2c5c98a03fbf242de6dd240ce227bb310 \
+    --hash=sha256:cecf7bfa38a5929027d8d9abb3f0d0fa21aec47c6c97f4539a7365f72e54819e \
+    --hash=sha256:ee3e5c20cf0c760d7b1a0ba16e41a013d3a31b67a90512b447b33f5da3436580
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 comfy-kitchen==0.2.8 \
     --hash=sha256:0b322992cf1681ebe3d413ac7950f39e5cc425505c13cef8d08527ce82fe5e32 \
     --hash=sha256:0c2eb7d03921a70e21fd9bb43d557e09b20bec81479cb85c2b58e8cdfb2cacc9 \
@@ -581,38 +583,38 @@ comfy-kitchen==0.2.8 \
     --hash=sha256:997dd4c5b5b854164fb76909a9cbc629cb7c471084e466c85d343842a4160a97 \
     --hash=sha256:a5c782f5eef84212e16f38d8c33e667f2119d8f8e13ee4eeac624ac60649b1d6 \
     --hash=sha256:b1249d098e72ba895758c7723881e5603150d7fad39a83b369a887dac2352a43
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
-comfyui-embedded-docs==0.4.3 \
-    --hash=sha256:1cc2abf93eb906fe746dbf1c69271b1f500216b0a0aa0d48a084218ceb71bbac \
-    --hash=sha256:da60669d2579eba86fd28ceeb5022b902ed8a2fd50c667a8602593672cc544a9
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
-comfyui-frontend-package==1.41.21 \
-    --hash=sha256:47627b04bcbfe3815f4521d92b8483f5e5a908aa4be57b224a82e7fc2ea3eed7 \
-    --hash=sha256:f66b9b9f23814db8291dc673b4478f916fd637bf89a0d1605cdb6d0c1a032049
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
-comfyui-workflow-templates==0.9.38 \
-    --hash=sha256:0a48dfb8ff77270ae739b910cc9f035324f400d76d348e3984179eb0bd8fbf57 \
-    --hash=sha256:be0b4faa6ade4cca270b0aff654c30ffd9eeed210ef6bc74dee4e00d273177fc
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
-comfyui-workflow-templates-core==0.3.187 \
-    --hash=sha256:2fff0b9868cedee20b9352936c7aba02832f72803588a9d947618c96902fe2ad \
-    --hash=sha256:698096254d76762ab14a8202709ddd00fbe13519aeaa23d2bde9d810a5cbe039
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
+comfyui-embedded-docs==0.5.0 \
+    --hash=sha256:87d831bb39f99a9dacc546f8ad9504634d026ec90759919bc843eecfefde877f \
+    --hash=sha256:9198f345a0cfa977c9f7bd3609a0359baebe5a28f0724ba362a159e4dbfd3761
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
+comfyui-frontend-package==1.43.18 \
+    --hash=sha256:bb2727f129ccaac2f44552ae538519e2c865a4ccc1a4bd7133467a5628153b0a \
+    --hash=sha256:cfbe53aca52e58f8c96300445591a0702d54ac4b05ceaac6b5cefee058171e53
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
+comfyui-workflow-templates==0.9.79 \
+    --hash=sha256:81f9389d214499bc1e6a285cd1e0404febfc067438310936950dd7b4d008f847 \
+    --hash=sha256:cb7f891ac1bdc953229406f10a63c711d21fc97ef439b2ce74f6650458e5f958
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
+comfyui-workflow-templates-core==0.3.235 \
+    --hash=sha256:36e0f59d2540b2b56180000fd6da713165e80fffff9a3e82d7fa56aef2c60ba1 \
+    --hash=sha256:6fcfc47b6eef936999b169b113f6338e9672ca29980b35298b38c3858fc84d18
     # via comfyui-workflow-templates
-comfyui-workflow-templates-media-api==0.3.67 \
-    --hash=sha256:6fdaacda54fe6761280c0c866f3a5aba225e350a04c2ab60f3a6686d532bc890 \
-    --hash=sha256:baab4760d87a62a0314ff48a0b653349f0dd9beccc95630b9274bf76bb9662e6
+comfyui-workflow-templates-media-api==0.3.77 \
+    --hash=sha256:8faa9f016e8fafc3f06a2acdb5d7b101bac285bf3227f51f504f3718fefb12c2 \
+    --hash=sha256:d6031bb0ad401b6dd8e6deb36a3eae44e339d1583f0467d3fee32afc44b2872f
     # via comfyui-workflow-templates
-comfyui-workflow-templates-media-image==0.3.113 \
-    --hash=sha256:195ae2cf391184850d256488878fd41fe74e8c41c1494c8bde22e7c4a757ba68 \
-    --hash=sha256:d59a1a62fc80ace1aeb3aa566ea344a56bc80c03cbef6f7f732a8d1136cd27cf
+comfyui-workflow-templates-media-image==0.3.140 \
+    --hash=sha256:87a37c21f10adff8f92d7ea7097f4feef7f546601a0793015ed1920ebd7d96ad \
+    --hash=sha256:ec78db5824d234d42aebc9cee212cca7739975e6cc040e5ec361e50435e18266
     # via comfyui-workflow-templates
-comfyui-workflow-templates-media-other==0.3.160 \
-    --hash=sha256:8720193717547011284d941c0d9562d5ec1e57510ebedddb91e898dabfe114f9 \
-    --hash=sha256:e3da981c98bd53beb36a680682da167a52372d0bc545c36a3bf9894d84020636
+comfyui-workflow-templates-media-other==0.3.201 \
+    --hash=sha256:5b6bc03347d244972584eba04e10b2d5d8142a1cdec331321f656cfeadacdda0 \
+    --hash=sha256:e7e46986c9c1ea863b21c0cb242386286bf891ef0c3e893feeb7219b3d35f56c
     # via comfyui-workflow-templates
-comfyui-workflow-templates-media-video==0.3.67 \
-    --hash=sha256:cdb259f964fa185b52709dbf9d84b3c8b8bd5ce067b79fe1b4b71f17b2214c6f \
-    --hash=sha256:e7a177f03d8708f43ff5000c0852b5f09923f763148b76cd1181725b5f7de209
+comfyui-workflow-templates-media-video==0.3.85 \
+    --hash=sha256:13dba68902279eece5bb45b45f167e11ae487e12c84721785d98367d3fbf652a \
+    --hash=sha256:5fd9202f875e2d0f24cd736aae9218c51ecbf5c72d6983731e8c4d9c382293b2
     # via comfyui-workflow-templates
 cryptography==46.0.6 \
     --hash=sha256:02fad249cb0e090b574e30b276a3da6a149e04ee2f049725b1f69e7b8351ec70 \
@@ -669,13 +671,13 @@ einops==0.8.2 \
     --hash=sha256:54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193 \
     --hash=sha256:609da665570e5e265e27283aab09e7f279ade90c4f01bcfca111f3d3e13f2827
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   spandrel
 filelock==3.25.2 \
     --hash=sha256:b64ece2b38f4ca29dd3e810287aa8c48182bbecd1ae6e9ae126c9b35f1382694 \
     --hash=sha256:ca8afb0da15f229774c9ad1b455ed96e85a81373065fb10446672f64444ddf70
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   huggingface-hub
     #   torch
 frozenlist==1.8.0 \
@@ -825,7 +827,7 @@ gitdb==4.0.12 \
 gitpython==3.1.46 \
     --hash=sha256:400124c7d0ef4ea03f7310ac2fbf7151e09ff97f2a3288d64a440c584a29c37f \
     --hash=sha256:79812ed143d9d25b6d176a10bb511de0f9c67b1fa641d82097b0ab90398a2058
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 glfw==2.10.0 \
     --hash=sha256:23936202a107039b5372f0b88ae1d11080746aa1c78910a45d4a0c4cf408cfaa \
     --hash=sha256:27c9e9a2d5e1dc3c9e3996171d844d9df9a5a101e797cb94cce217b7afcf8fd9 \
@@ -852,7 +854,7 @@ glfw==2.10.0 \
     --hash=sha256:d28d6f3ef217e64e35dc6fd0a7acb4cec9bfe7cd14dd9b35a7228a87002de154 \
     --hash=sha256:f968b522bb6a0e04aaf4dcac30a476d7229308bb2bac406a60587debb5a61e29 \
     --hash=sha256:fca724a21a372731edb290841edd28a9fb1ee490f833392752844ac807c0086a
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 greenlet==3.3.2 \
     --hash=sha256:02b0a8682aecd4d3c6c18edf52bc8e51eacdd75c8eac52a790a210b06aa295fd \
     --hash=sha256:18cb1b7337bca281915b3c5d5ae19f4e76d35e1df80f4ad3c1a7be91fadf1082 \
@@ -961,7 +963,7 @@ huggingface-hub==1.8.0 \
     --hash=sha256:c5627b2fd521e00caf8eff4ac965ba988ea75167fad7ee72e17f9b7183ec63f3 \
     --hash=sha256:d3eb5047bd4e33c987429de6020d4810d38a5bef95b3b40df9b17346b7f353f2
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   tokenizers
     #   transformers
 hyperframe==6.1.0 \
@@ -991,7 +993,7 @@ jsonschema-specifications==2025.9.1 \
 kornia==0.8.2 \
     --hash=sha256:32dfe77c9c74a87a2de49395aa3c2c376a1b63c27611a298b394d02d13905819 \
     --hash=sha256:5411b2ce0dd909d1608016308cd68faeef90f88c47f47e8ecd40553fd4d8b937
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 kornia-rs==0.1.10 \
     --hash=sha256:021b0a02b2356b12b3954a298f369ed4fe2dd522dcf8b6d72f91bf3bd8eea201 \
     --hash=sha256:0afc523fcd1644e24c8cc095a21565789a583a1637d09dbc31e0f1fc8ad41974 \
@@ -1149,7 +1151,7 @@ markupsafe==3.0.3 \
 matrix-nio==0.25.2 \
     --hash=sha256:8ef8180c374e12368e5c83a692abfb3bab8d71efcd17c5560b5c40c9b6f2f600 \
     --hash=sha256:9c2880004b0e475db874456c0f79b7dd2b6285073a7663bcaca29e0754a67495
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 mdurl==0.1.2 \
     --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
@@ -1386,7 +1388,7 @@ numpy==2.4.4 \
     --hash=sha256:fbc356aae7adf9e6336d336b9c8111d390a05df88f1805573ebb0807bd06fd1d \
     --hash=sha256:fcfe2045fd2e8f3cb0ce9d4ba6dba6333b8fa05bb8a4939c908cd43322d14c7e
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   scipy
     #   spandrel
     #   torchsde
@@ -1492,7 +1494,7 @@ pillow==12.1.1 \
     --hash=sha256:fc354a04072b765eccf2204f588a7a532c9511e8b9c7f900e1b64e3e33487090 \
     --hash=sha256:fc44ef1f3de4f45b50ccf9136999d71abb99dca7706bc75d222ed350b9fd2289
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   torchvision
 propcache==0.4.1 \
     --hash=sha256:0002004213ee1f36cfb3f9a42b5066100c44276b9b72b4e1504cddd3d692e86e \
@@ -1642,7 +1644,7 @@ psutil==7.2.2 \
     --hash=sha256:ed0cace939114f62738d808fdcecd4c869222507e266e574799e9c0faa17d486 \
     --hash=sha256:eed63d3b4d62449571547b60578c5b2c4bcccc5387148db46e0c2313dad0ee00 \
     --hash=sha256:fd04ef36b4a6d599bbdb225dd1d3f51e00105f6d48a28f006da7f9822f2606d8
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 pycparser==3.0 \
     --hash=sha256:600f49d217304a5902ac3c37e1281c9fe94e4d0489de643a9504c5cdfdfc6b29 \
     --hash=sha256:b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992
@@ -1694,7 +1696,7 @@ pydantic==2.12.5 \
     --hash=sha256:4d351024c75c0f085a9febbb665ce8c0c6ec5d30e903bdb6394b7ede26aebb49 \
     --hash=sha256:e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   pydantic-settings
 pydantic-core==2.41.5 \
     --hash=sha256:0177272f88ab8312479336e1d777f6b124537d47f2123f89cb37e0accea97f90 \
@@ -1822,11 +1824,11 @@ pydantic-core==2.41.5 \
 pydantic-settings==2.13.1 \
     --hash=sha256:b4c11847b15237fb0171e1462bf540e294affb9b86db4d9aa5c01730bdbe4025 \
     --hash=sha256:d56fd801823dbeae7f0975e1f8c8e25c258eb75d278ea7abb5d9cebb01b56237
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 pygithub==2.9.0 \
     --hash=sha256:5e2b260ce327bffce9b00f447b65953ef7078ffe93e5a5425624a3075483927c \
     --hash=sha256:a26abda1222febba31238682634cad11d8b966137ed6cc3c5e445b29a11cb0a4
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 pygments==2.20.0 \
     --hash=sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f \
     --hash=sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176
@@ -1865,7 +1867,7 @@ pynacl==1.6.2 \
 pyopengl==3.1.10 \
     --hash=sha256:794a943daced39300879e4e47bd94525280685f42dbb5a998d336cfff151d74f \
     --hash=sha256:c4a02d6866b54eb119c8e9b3fb04fa835a95ab802dd96607ab4cdb0012df8335
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 python-dotenv==1.2.2 \
     --hash=sha256:1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a \
     --hash=sha256:2c371a91fbd7ba082c2c1dc1f8bf89ca22564a087c2c287cd9b662adde799cf3
@@ -1949,7 +1951,7 @@ pyyaml==6.0.3 \
     --hash=sha256:fa160448684b4e94d80416c0fa4aac48967a969efe22931448d853ada8baf926 \
     --hash=sha256:fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   huggingface-hub
     #   transformers
 referencing==0.37.0 \
@@ -2078,13 +2080,13 @@ requests==2.33.1 \
     --hash=sha256:18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517 \
     --hash=sha256:4e6d1ef462f3626a1f0a0a9c42dd93c63bad33f9f1c1937509b8c5c8718ab56a
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   pygithub
 rich==14.3.3 \
     --hash=sha256:793431c1f8619afa7d3b52b2cdec859562b950ea0d4b6b505397612db8d5362d \
     --hash=sha256:b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   typer
 rpds-py==0.30.0 \
     --hash=sha256:07ae8a593e1c3c6b82ca3292efbe73c30b61332fd612e05abee07c79359f292f \
@@ -2230,7 +2232,7 @@ safetensors==0.7.0 \
     --hash=sha256:e07d91d0c92a31200f25351f4acb2bc6aff7f48094e13ebb1d0fb995b54b6542 \
     --hash=sha256:f4729811a6640d019a4b7ba8638ee2fd21fa5ca8c7e7bdf0fed62068fcaac737
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   spandrel
     #   transformers
 scipy==1.17.1 \
@@ -2296,7 +2298,7 @@ scipy==1.17.1 \
     --hash=sha256:f8885db0bc2bffa59d5c1b72fad7a6a92d3e80e7257f967dd81abb553a90d293 \
     --hash=sha256:fcb310ddb270a06114bb64bbe53c94926b943f5b7f0842194d585c65eb4edd76
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   torchsde
 sentencepiece==0.2.1 \
     --hash=sha256:010f025a544ef770bb395091d57cb94deb9652d8972e0d09f71d85d5a0816c8c \
@@ -2364,7 +2366,7 @@ sentencepiece==0.2.1 \
     --hash=sha256:e10fa50bdbaa5e2445dbd387979980d391760faf0ec99a09bd7780ff37eaec44 \
     --hash=sha256:e37e4b4c4a11662b5db521def4e44d4d30ae69a1743241412a93ae40fdcab4bb \
     --hash=sha256:e52144670738b4b477fade6c2a9b6af71a8d0094514c9853ac9f6fc1fcfabae7
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 setuptools==81.0.0 \
     --hash=sha256:487b53915f52501f0a79ccfd0c02c165ffe06631443a886740b91af4b7a5845a \
     --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6
@@ -2376,7 +2378,7 @@ shellingham==1.5.4 \
 simpleeval==1.0.7 \
     --hash=sha256:1e10e5f9fec597814444e20c0892ed15162fa214c8a88f434b5b077cf2fef85b \
     --hash=sha256:97ac271bfd8f2af9e7b9a36ceea67617f26fa873f9d5ae1922f64d4c1442534b
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 smmap==5.0.3 \
     --hash=sha256:4d9debb8b99007ae47165abc08670bd74cb74b5227dda7f643eccc4e9eb5642c \
     --hash=sha256:c106e05d5a61449cf6ba9a1e650227ecfb141590d2a98412103ff35d89fc7b2f
@@ -2384,7 +2386,7 @@ smmap==5.0.3 \
 spandrel==0.4.2 \
     --hash=sha256:6c93e3ecbeb0e548fd2df45a605472b34c1614287c56b51bb33cdef7ae5235b5 \
     --hash=sha256:fefa4ea966c6a5b7721dcf24f3e2062a5a96a395c8bedcb570fb55971fdcbccb
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 sqlalchemy==2.0.48 \
     --hash=sha256:01f6bbd4308b23240cf7d3ef117557c8fd097ec9549d5d8a52977544e35b40ad \
     --hash=sha256:07edba08061bc277bfdc772dd2a1a43978f5a45994dd3ede26391b405c15221e \
@@ -2450,7 +2452,7 @@ sqlalchemy==2.0.48 \
     --hash=sha256:fac0fa4e4f55f118fd87177dacb1c6522fe39c28d498d259014020fec9164c29 \
     --hash=sha256:fd08b90d211c086181caed76931ecfa2bdfc83eea3cfccdb0f82abc6c4b876cb
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   alembic
 sympy==1.14.0 \
     --hash=sha256:d3d3fe8df1e5a0b42f0e7bdf50541697dbe7d23746e894990c030e2b05e72517 \
@@ -2482,21 +2484,21 @@ tokenizers==0.22.2 \
     --hash=sha256:e10bf9113d209be7cd046d40fbabbaf3278ff6d18eb4da4c500443185dc1896c \
     --hash=sha256:f01a9c019878532f98927d2bacb79bbb404b43d3437455522a00a30718cdedb5
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   transformers
 toml==0.10.2 \
     --hash=sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b \
     --hash=sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 torchsde==0.2.6 \
     --hash=sha256:19bf7ff02eec7e8e46ba1cdb4aa0f9db1c51d492524a16975234b467f7fc463b \
     --hash=sha256:81d074d3504f9d190f1694fb526395afbe4608ee43a88adb1262a639e5b4778b
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 tqdm==4.67.3 \
     --hash=sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb \
     --hash=sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   huggingface-hub
     #   transformers
 trampoline==0.1.2 \
@@ -2505,19 +2507,19 @@ trampoline==0.1.2 \
 transformers==5.4.0 \
     --hash=sha256:9fbe50602d2a4e6d0aa8a35a605433dfac72d595ee2192eae192590a6cc2df86 \
     --hash=sha256:cb34ca89dce345ae3224b290346b9c0fa9694b951d54f3ed16334a4b1bfe3d04
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 typer==0.24.1 \
     --hash=sha256:112c1f0ce578bfb4cab9ffdabc68f031416ebcc216536611ba21f04e9aa84c9e \
     --hash=sha256:e39b4732d65fbdcde189ae76cf7cd48aeae72919dea1fdfc16593be016256b45
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   huggingface-hub
     #   transformers
 typing-extensions==4.15.0 \
     --hash=sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466 \
     --hash=sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   aiosignal
     #   alembic
     #   anyio
@@ -2566,7 +2568,7 @@ uv==0.11.2 \
     --hash=sha256:f27ca998085eb8dc095ff9d7568aa08d9ce7c0d2b74bd525da5cd2e5b7367b71 \
     --hash=sha256:fbbd6e6e682b7f0bbdfff3348e580ea0fa58a07741e54cc8641b919bdf6f9128 \
     --hash=sha256:fea7efc97f9fcfb345e588c71fa56250c0db8c2bfd8d4e2cd4d21e1308c4e6ac
-    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    # via -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
 yarl==1.23.0 \
     --hash=sha256:03214408cfa590df47728b84c679ae4ef00be2428e11630277be0727eba2d7cc \
     --hash=sha256:041b1a4cefacf65840b4e295c6985f334ba83c30607441ae3cf206a0eed1a2e4 \
@@ -2697,7 +2699,7 @@ yarl==1.23.0 \
     --hash=sha256:fe8f8f5e70e6dbdfca9882cd9deaac058729bcf323cf7a58660901e55c9c94f6 \
     --hash=sha256:fffc45637bcd6538de8b85f51e3df3223e4ad89bccbfca0481c08c7fc8b7ed7d
     # via
-    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.TWlvYNosdh/runtime.in
+    #   -r /var/folders/qh/t9y6b1qd0cn5n7pqzmg2hldr0000gn/T/tmp.dK965AZA9n/runtime.in
     #   aiohttp
 
 # The following packages were excluded from the output:
